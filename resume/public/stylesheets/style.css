@@ -1,0 +1,32 @@
+body {background-color:#cccccc;}
+div#main {
+	width: 1024px;
+	margin: 0 auto;
+    border: 2px solid #9999ff;
+    background-color:#6666ff;
+}
+div.header {
+	width: 1024px;
+	height: 100px;
+}
+div.header h1 {
+    font-family: 'Arial' sans-serif;
+    font-size: 24px;
+    color:#990000;
+}
+div#find {
+    float: left;
+    margin: 0 10px;
+}
+div.left_col {
+	width: 250px;
+	height: 600px;
+	float: left;
+    background-color: white;
+}
+div.right_col {
+	width: 766px;
+	height: 600px;
+	float: left;
+    background-color: white;
+}

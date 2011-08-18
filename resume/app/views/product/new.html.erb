@@ -1,0 +1,21 @@
+<h2>Добавить новый продукт:</h2>
+<%- form_for :product, :url => {:controller => :product, :action => :create},
+             :html => { :multipart => true } do |f| %>
+
+    <p>
+      <%= f.label :name, "Название:" %><br/>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :discrip, "Описание" %><br/>
+      <%= f.text_field :discrip %>
+    </p>
+    <p>
+      <%= f.label :price, "Цена" %><br/>
+      <%= f.text_field :price %>
+    </p>
+    <p>
+      <%= f.file_field :img %>
+    </p>
+    <%= submit_tag "New" %>
+<%- end %>

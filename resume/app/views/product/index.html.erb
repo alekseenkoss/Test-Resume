@@ -1,0 +1,4 @@
+ <%= will_paginate @products %> <br/><br/>
+    <% for product in @products%>
+        <%= link_to product.name, {:controller => :product, :action => :show, :id => product.id} %><br/>
+    <% end %>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+    <div id="main">
+        <div class="header">
+          <h1 style="text-align:center;">Wellcome to the Resume Site</h1>
+          <div id="find">
+          <% form_for :search, :url => {:controller => :product, :action => :search} do |f| %>
+            <%= f.text_field :find, :size => 30 %>
+            <%= submit_tag "Find!" %>
+          <% end %>
+          </div>
+        </div>
+        <div class="left_col">
+          <ul>
+            <li><%= link_to "Каталог", {:controller => :product, :action => :index} %></li>
+            <li><%= link_to "Новый продукт", {:controller => :product, :action => :new} %></li>
+          </ul>
+        </div>
+        <div class="right_col">
+          <%= yield :layout %>
+        </div>
+    </div>
+</body>
+</html>

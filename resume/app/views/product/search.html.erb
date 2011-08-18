@@ -1,0 +1,4 @@
+<h2>Результат поиска: </h2>>
+<%- for product in @result %>
+    <%= link_to product.name, {:controller => :product, :action => :show, :id => product.id} %>
+<%- end %>
